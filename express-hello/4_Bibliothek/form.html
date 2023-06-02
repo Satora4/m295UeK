@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Add Book</h1>
+    <form action="http://localhost:3000/books" method="post">
+        <label for="isbnInput">ISBN:</label>
+        <input type="text" name="isbn" id="isbnInput"><br><br>
+
+        <label for="titleInput">Title:</label>
+        <input type="text" name="title" id="titleInput"><br><br>
+
+        <label for="authorInput">Author:</label>
+        <input type="text" name="author" id="authorInput"><br><br>
+
+        <label for="yearInput">Year:</label>
+        <input type="text" name="year" id="yearInput"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h1>Update Book</h1>
+    <form action="http://localhost:3000/books/978-0061120084" method="post">
+        <label for="isbnInput">ISBN:</label>
+        <input type="text" name="isbn" id="isbnInput"><br><br>
+
+        <label for="titleInput">Title:</label>
+        <input type="text" name="title" id="titleInput"><br><br>
+
+        <label for="authorInput">Author:</label>
+        <input type="text" name="author" id="authorInput"><br><br>
+
+        <label for="yearInput">Year:</label>
+        <input type="text" name="year" id="yearInput"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h1>Lend Book</h1>
+    <form action="http://localhost:3000/lends" method="post">
+        <label for="isbnInput">ISBN:</label>
+        <input type="text" name="isbn" id="isbnInput"><br><br>
+
+        <label for="customer_idInput">Customer Id:</label>
+        <input type="text" name="customer_id" id="customer_idInput"><br><br>
+
+        <label for="borrowed_atInput">Borowed At:</label>
+        <input type="date" name="borrowed_at" id="borrowed_atInput"><br><br>
+
+        <label for="returned_atInput">Returned At:</label>
+        <input type="date" name="returned_at" id="returned_atInput"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

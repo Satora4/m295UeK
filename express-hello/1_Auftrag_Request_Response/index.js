@@ -28,12 +28,12 @@ app.get('/name', (request, response) => {
 
 // Auftrag 4
 app.get('/html', (request, response) => {
-    response.sendFile("/workspaces/m295UeK/express-hello/Auftrag_Request_Response/recourses/HelloWorld.html");
+    response.sendFile("/workspaces/m295UeK/express-hello/1_Auftrag_Request_Response/recourses/HelloWorld.html");
 })
 
 // Auftrag 5
 app.get('/image', (request, response) => {
-    response.sendFile("/workspaces/m295UeK/express-hello/Auftrag_Request_Response/recourses/image.jpg");
+    response.sendFile("/workspaces/m295UeK/express-hello/1_Auftrag_Request_Response/recourses/image.jpg");
 })
 
 // Auftrag 6
@@ -53,7 +53,7 @@ app.get('/secret', (request, response) => {
 
 // Auftrag 9
 app.get('/xml', (request, response) => {
-    response.sendFile("/workspaces/m295UeK/express-hello/Auftrag_Request_Response/recourses/HelloWorld.xml");
+    response.sendFile("/workspaces/m295UeK/express-hello/1_Auftrag_Request_Response/recourses/HelloWorld.xml");
 })
 
 // Auftrag 10

@@ -1,13 +1,17 @@
 {
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "swagger-ui-express": "^4.6.3",
+    "yaml": "^2.3.1"
   },
   "name": "express-hello",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon Auftrag_Request_Response/index.js",
-    "dev": "nodemon Auftrag_Wetter/weather.js",
+    "st1": "nodemon 1_Auftrag_Request_Response/index.js",
+    "st2": "nodemon 2_Auftrag_Wetter/weather.js",
+    "st3": "nodemon 3_Auftrag_Request_Response/index.js",
+    "st4": "nodemon 4_Bibliothek/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
