@@ -22,12 +22,32 @@ const pool = mariadb.createPool({
 router.get('/', async (request, response) => {
   try {
     const connection = await pool.getConnection();
-    const users = await connection.query('SELECT * FROM entry');
-    response.json(users);
+    const entry = await connection.query('SELECT * FROM entry');
+    response.json(entry);
     connection.release();
   } catch (err) {
     response.status(500).json({ error: 'Datenbankfehler' });
   }
 });
+
+router.post('/addEntry', async (request, response) => {
+  const data = request.body;
+
+  if (data.start_time && data.end_time && data.category_id) {
+    try {
+      const connection = await pool.getConnection();
+      var sql = `INSERT INTO entry (start_time, end_time, category_id) VALUES (?, ?, ?)`;
+        connection.query(sql, [data.start_time, data.end_time, data.category_id], function (err, data) {
+          if (err) {
+            response.json({ error: "failed to insert"});
+          } else {
+            response.json(data);
+        }
+      });
+    } catch (err) {
+      response.send(err);
+    }
+  }
+})
 
 module.exports = router;
